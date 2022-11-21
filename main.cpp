@@ -94,5 +94,6 @@ int main()
 
 	Index(&cellStrStart);
 
+	system("pause");
 	return 0;
 }
