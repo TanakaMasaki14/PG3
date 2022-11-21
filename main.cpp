@@ -108,5 +108,6 @@ int main()
 	Create(GetInsertCellAddres(&cellStart, 6), 200112);
 	Index(&cellStart);
 
+	system("pause");
 	return 0;
 }
