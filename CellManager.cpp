@@ -6,7 +6,6 @@ void CellState::SetCellManager(CellManager* cellManager)
 	this->cellManager = cellManager;
 }
 
-//--------------------------------------------------------
 CellManager::CellManager()
 {
 	this->cell = new CELL();

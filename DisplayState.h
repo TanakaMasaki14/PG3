@@ -15,7 +15,6 @@ class OrderDisplay : public CellState
 {
 private:
 
-
 public:
 	void Update() override;
 	void Draw() override;

@@ -1,7 +1,6 @@
 #include"CellManager.h"
 #include "EditState.h"
 
-//-------------------------------------------------------------
 void EditState::Update()
 {
 	scanf_s("%d", cellManager->GetNum());

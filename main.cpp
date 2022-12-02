@@ -12,5 +12,4 @@ int main()
 
 	delete cellManager;
 
-	return 0;
 }

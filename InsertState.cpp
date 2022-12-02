@@ -1,6 +1,5 @@
 #include"InsertState.h"
 
-//-------------------------------------------------------------
 void InsertState::Update()
 {
 	char buff[100];
@@ -21,7 +20,6 @@ void InsertState::Draw()
 	printf("\n-\n\n");
 }
 
-//------------------------------------------------------------------
 void InsertState2::Update()
 {
 	char str[128] = { 0 };
@@ -46,7 +44,6 @@ void InsertState2::Draw()
 	printf("\n-\n\n");
 }
 
-//------------------------------------------------------------------
 void InsertState3::Update()
 {
 	int num = 0;

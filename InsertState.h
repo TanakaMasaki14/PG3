@@ -5,7 +5,6 @@ class InsertState2 : public CellState
 {
 private:
 
-
 public:
 	void Update() override;
 	void Draw() override;
@@ -14,7 +13,6 @@ public:
 class InsertState3 : public CellState
 {
 private:
-
 
 public:
 	void Update() override;

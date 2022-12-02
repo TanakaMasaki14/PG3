@@ -6,12 +6,11 @@ void DeleteState::Update()
 {
 	scanf_s("%d", cellManager->GetNum());
 
-	//要素がなければ(添え字が0からなので-1（0番目があるとサイズが1になる）)
 	if (*cellManager->GetNum() > GetCellSize(cellManager->GetCell()) - 1)
 	{
 		cellManager->ChangeState(new DeleteState3);
 	}
-	//あれば
+
 	else
 	{
 		cellManager->ChangeState(new DeleteState2);
@@ -25,11 +24,8 @@ void DeleteState::Draw()
 	printf("\n-\n\n");
 }
 
-
-//-------------------------------------------------------------------------------
 void DeleteState2::Update()
 {
-	//削除
 	DeleteCell(GetInsertCellAddres(cellManager->GetCell(), *cellManager->GetNum()));
 
 	int num = 0;

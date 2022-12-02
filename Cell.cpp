@@ -4,7 +4,7 @@
 void Create(CELL* currentCell, const char* insertNum)
 {
 	CELL* newCell;
-	//メモリ確保
+
 	newCell = (CELL*)malloc(sizeof(CELL));
 
 	strcpy_s(newCell->val, insertNum);
@@ -13,7 +13,6 @@ void Create(CELL* currentCell, const char* insertNum)
 	
 	newCell->next = currentCell->next;
 
-	//挿入
 	if (currentCell->next)
 	{
 		CELL* nextCell = currentCell->next;
@@ -82,7 +81,6 @@ int GetCellSize(CELL* cellStart)
 {
 	int count = 0;
 
-	//nextがあればカウント増やす
 	while (cellStart->next != nullptr)
 	{
 		cellStart = cellStart->next;

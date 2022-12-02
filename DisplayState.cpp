@@ -72,11 +72,9 @@ void OrderDisplay::Update()
 
 	int num = 0;
 
-	//カウント用
 	*cellManager->GetNum() = 0;
 
 	int i = 0;
-	//改行を認識するために文字列で取得、改行じゃなかった場合はintに変換する
 	char buff[100];
 	fgets(buff, sizeof(buff), stdin);
 	while (true)
@@ -105,7 +103,6 @@ void OrderDisplay::Draw()
 	printf("\n\n-\n");
 }
 
-//-----------------------------------------------------------------
 void OrderDisplay2::Update()
 {
 	int num = 0;
@@ -130,7 +127,6 @@ void OrderDisplay2::Draw()
 	int i = 0;
 	while (true)
 	{
-		//最後入力した-1のカウント分減らす(-1)
 		if (*cellManager->GetNum() - 1 < i) { break; }
 
 		printf(" %d: \"%s\",\n", cellManager->GetOrder()[i],

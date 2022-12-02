@@ -15,7 +15,6 @@ class EditState3 : public CellState
 {
 private:
 
-
 public:
 	void Update() override;
 	void Draw() override;
@@ -24,7 +23,6 @@ public:
 class EditState4 : public CellState
 {
 private:
-
 
 public:
 	void Update() override;

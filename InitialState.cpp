@@ -21,9 +21,6 @@ void InitialState::Update()
 	case 4:
 		cellManager->ChangeState(new DeleteState);
 		break;
-		//case 5:
-			//cellManager->ChangeState(new );
-		break;
 	}
 }
 
