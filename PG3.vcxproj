@@ -139,7 +139,22 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Cell.cpp" />
+    <ClCompile Include="CellManager.cpp" />
+    <ClCompile Include="DeleteState.cpp" />
+    <ClCompile Include="DisplayState.cpp" />
+    <ClCompile Include="EditState.cpp" />
+    <ClCompile Include="InitialState.cpp" />
+    <ClCompile Include="InsertState.cpp" />
     <ClCompile Include="main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Cell.h" />
+    <ClInclude Include="CellManager.h" />
+    <ClInclude Include="DeleteState.h" />
+    <ClInclude Include="DisplayState.h" />
+    <ClInclude Include="EditState.h" />
+    <ClInclude Include="InsertState.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
