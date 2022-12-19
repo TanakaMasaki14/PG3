@@ -34,7 +34,7 @@ void SceneManager::Draw()
 	switch (sceneNum)
 	{
 	case SCENE::TITLE:
-		printf("TITLE\n\n");
+		printf("Title\n\n");
 		break;
 	case SCENE::NEW_GAME:
 		printf("NewGame\n\n");

@@ -1,9 +1,7 @@
 #include"SceneManager.h"
 
-
 int main()
 {
-	//ŒJ‚è•Ô‚µ
 	while (true)
 	{
 		SceneManager::GetInstance()->Update();
