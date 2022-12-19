@@ -1,15 +1,37 @@
 #pragma once
-#include "Singleton.h"
-#include <memory>
+#include<stdio.h>
+#include <stdlib.h>
 
-template<typename T> class Singleton;
-
-class SceneManager : public Singleton<SceneManager>
+class SceneManager final
 {
 private:
-	friend Singleton<SceneManager>;
+	enum SCENE
+	{
+		TITLE,
+		NEW_GAME,
+		GAME_PLAY,
+		GAME_CLEAR
+	};
+
+	int sceneNum = SCENE::TITLE;
+
+private:
+	//コンストラクタをprivate
+	SceneManager();
+	//デストラクタも
+	~SceneManager();
 
 public:
-	void ChangeScene(const int sceneNo);
-};
+	//コピーコンストラクタを無効
+	SceneManager(const SceneManager& obj) = delete;
+	//代入演算子も
+	SceneManager& operator=(const SceneManager& obj) = delete;
 
+	//インスタンス取得
+	static SceneManager* GetInstance();
+
+	void ChangeScene(int sceneNo);
+
+	void Update();
+	void Draw();
+};

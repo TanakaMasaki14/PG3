@@ -1,27 +1,51 @@
 #include "SceneManager.h"
-#include <iostream>
 
-void SceneManager::ChangeScene(const int sceneNo)
+
+SceneManager::SceneManager()
 {
-	switch (sceneNo)
+
+}
+
+SceneManager::~SceneManager()
+{
+
+}
+
+SceneManager* SceneManager::GetInstance()
+{
+	static SceneManager instance;
+
+	return &instance;
+}
+
+void SceneManager::ChangeScene(int sceneNo)
+{
+	if (sceneNo > SCENE::GAME_CLEAR) sceneNum = SCENE::TITLE;
+	else                             sceneNum = sceneNo;
+}
+
+void SceneManager::Update()
+{
+	system("pause");
+}
+
+void SceneManager::Draw()
+{
+	switch (sceneNum)
 	{
-	case 0:
-		std::cout << "SceneNo: 0" << std::endl;
+	case SCENE::TITLE:
+		printf("TITLE\n\n");
 		break;
-
-	case 1:
-		std::cout << "SceneNo: 1" << std::endl;
+	case SCENE::NEW_GAME:
+		printf("NewGame\n\n");
 		break;
-
-	case 2:
-		std::cout << "SceneNo: 2" << std::endl;
+	case SCENE::GAME_PLAY:
+		printf("GamePlay\n\n");
 		break;
-
-	case 3:
-		std::cout << "SceneNo: 3" << std::endl;
-		break;
-
-	default:
+	case SCENE::GAME_CLEAR:
+		printf("GameClear\n\n");
 		break;
 	}
+
+	ChangeScene(sceneNum + 1);
 }
