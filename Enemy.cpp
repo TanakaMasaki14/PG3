@@ -16,10 +16,10 @@ void Enemy::Draw()
 {
 	if (isAlive)
 	{
-		printf("%d”Ô¶‚«‚Ä‚Ü‚·,", num);
+		printf("%d¶‘¶,", num);
 	}
 	else
 	{
-		printf("%d”Ô€‚ñ‚Å‚Ü‚·,", num);
+		printf("%d€–S,", num);
 	}
 }
