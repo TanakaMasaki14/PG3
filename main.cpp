@@ -11,7 +11,7 @@ int main()
 		enemy[i].Initialize(i);
 	}
 
-	printf("Enterキー\n");
+	printf("Enterキーで倒す\n");
 
 	static const int strMax = 128;
 	static char str[strMax];
