@@ -1,28 +1,25 @@
 #pragma once
-#pragma once
 
 class Enemy
 {
 private:
-	//メンバ関数ポインタテーブル
-	static void (Enemy::* spFuncTable[])();
 
-	//行動フェーズ
-	static enum class Phase
+	static void (Enemy::* Table[])();
+
+	static enum class Type
 	{
-		MeleeAttack,
+		Melee,
 		Shot,
-		Secession
+		Evacuation
 	};
-	//フェーズ
-	Phase phase_ = Phase::MeleeAttack;
 
-	void MeleeAttack();
+	Type type_ = Type::Melee;
+
+	void Melee();
 	void Shot();
-	void Secession();
+	void Evacuation();
 
 public:
 	void Update();
 	void Draw();
 };
-

@@ -3,10 +3,9 @@
 #include <Windows.h>
 #include <iostream>
 
-
 void Enemy::Update()
 {
-	(this->*spFuncTable[static_cast<size_t>(phase_)])();
+	(this->*Table[static_cast<size_t>(type_)])();
 }
 
 void Enemy::Draw()
@@ -14,20 +13,20 @@ void Enemy::Draw()
 }
 
 //-------------------------------------------------------------
-void (Enemy::* Enemy::spFuncTable[])() = {
-	&Enemy::MeleeAttack,
+void (Enemy::* Enemy::Table[])() = {
+	&Enemy::Melee,
 	&Enemy::Shot,
-	&Enemy::Secession
+	&Enemy::Evacuation
 };
 
-void Enemy::MeleeAttack()
+void Enemy::Melee()
 {
 	std::system("cls");
 	printf("ãﬂê⁄");
 
 	Sleep(3 * 1000);
 
-	phase_ = Enemy::Phase::Shot;
+	type_ = Enemy::Type::Shot;
 }
 
 void Enemy::Shot()
@@ -37,17 +36,15 @@ void Enemy::Shot()
 
 	Sleep(3 * 1000);
 
-	phase_ = Enemy::Phase::Secession;
+	type_ = Enemy::Type::Evacuation;
 }
 
-void Enemy::Secession()
+void Enemy::Evacuation()
 {
 	std::system("cls");
 	printf("ó£íE");
 
 	Sleep(3 * 1000);
 
-	phase_ = Enemy::Phase::MeleeAttack;
+	type_ = Enemy::Type::Melee;
 }
-
-
